@@ -3,11 +3,24 @@
   "version": "1.0.0",
   "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.5.",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@angular/animations": "^18.2.11",
+    "@angular/cli": "^18.2.11",
+    "@angular/common": "^18.2.11",
+    "@angular/compiler": "^18.2.11",
+    "@angular/core": "^18.2.11",
+    "@angular/forms": "^18.2.11",
+    "@angular/platform-browser": "^18.2.11",
+    "@angular/platform-browser-dynamic": "^18.2.11",
+    "@nebular/theme": "^14.0.2"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^18.2.11"
+  }
 }

@@ -1,17 +1,17 @@
-<div>
+<div id="registerForm">
     <div class="container">
         <h2>Cadastro de Usuário</h2>
       
         <!-- Formulário com ngModel para binding -->
         <!-- #form="ngForm" (ngSubmit)="onSubmit(form)" class="form" -->
-        <form >
+        <form [formGroup]="registerForm" >
           <!-- Campo Nome -->
           <!-- [(ngModel)]="user.name"
           #name="ngModel"
           required -->
           <div class="form-group">
-            <label for="name">Nome:</label>
-            <input
+            <label for="name">Nome:</label><br/>
+            <input nbInput
               type="text"
               id="name"
               name="name"
@@ -29,8 +29,9 @@
           #email="ngModel"
           required -->
           <div class="form-group">
-            <label for="email">E-mail:</label>
+            <label for="email">E-mail:</label><br/>
             <input
+            nbInput
               type="email"
               id="email"
               name="email"
@@ -49,8 +50,9 @@
           #password="ngModel"
           required -->
           <div class="form-group">
-            <label for="password">Senha:</label>
+            <label for="password">Senha:</label><br/>
             <input
+            nbInput
               type="password"
               id="password"
               name="password"
@@ -70,14 +72,14 @@
            <!-- [compareWith]="password" -->
           <!-- Campo Confirmar Senha -->
           <div class="form-group">
-            <label for="confirmPassword">Confirmar Senha:</label>
+            <label for="confirmPassword">Confirmar Senha:</label><br/>
             <input
+            nbInput
               type="password"
               id="confirmPassword"
               name="confirmPassword"
               
-              
-              
+    
               class="form-control"
             />
             <!-- *ngIf="confirmPassword.invalid && confirmPassword.touched" class="error" -->
@@ -88,11 +90,11 @@
       
           <!-- Botão de Submissão -->
           <!-- type="submit" [disabled]="form.invalid" class="btn btn-primary" -->
-          <button >
+          <button nbButton status="primary">
             Cadastrar
-          </button>
+          </button><br/><br/>
         </form>
       </div>
 
-    <button (click)="goToLogin()">Login</button>
+    <button  (click)="goToLogin()" nbButton status="primary">Login</button>
 </div>
