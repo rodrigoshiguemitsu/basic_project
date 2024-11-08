@@ -1,0 +1,98 @@
+<div>
+    <div class="container">
+        <h2>Cadastro de Usuário</h2>
+      
+        <!-- Formulário com ngModel para binding -->
+        <!-- #form="ngForm" (ngSubmit)="onSubmit(form)" class="form" -->
+        <form >
+          <!-- Campo Nome -->
+          <!-- [(ngModel)]="user.name"
+          #name="ngModel"
+          required -->
+          <div class="form-group">
+            <label for="name">Nome:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              
+              class="form-control"
+            />
+            <!-- *ngIf="name.invalid && name.touched" class="error" -->
+            <div >
+              O nome é obrigatório.
+            </div>
+          </div>
+      
+          <!-- Campo E-mail -->
+          <!-- [(ngModel)]="user.email"
+          #email="ngModel"
+          required -->
+          <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              
+              email
+              class="form-control"
+            />
+            <!-- *ngIf="email.invalid && email.touched" class="error" -->
+            <div >
+              O e-mail é obrigatório e deve ser válido.
+            </div>
+          </div>
+      
+          <!-- Campo Senha -->
+          <!-- [(ngModel)]="user.password"
+          #password="ngModel"
+          required -->
+          <div class="form-group">
+            <label for="password">Senha:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              
+              minlength="6"
+              class="form-control"
+            />
+            <!-- *ngIf="password.invalid && password.touched" class="error" -->
+            <div >
+              A senha é obrigatória e deve ter pelo menos 6 caracteres.
+            </div>
+          </div>
+      
+          <!-- [(ngModel)]="user.confirmPassword" -->
+          <!-- #confirmPassword="ngModel" -->
+          <!-- required -->
+           <!-- [compareWith]="password" -->
+          <!-- Campo Confirmar Senha -->
+          <div class="form-group">
+            <label for="confirmPassword">Confirmar Senha:</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              
+              
+              
+              class="form-control"
+            />
+            <!-- *ngIf="confirmPassword.invalid && confirmPassword.touched" class="error" -->
+            <div >
+              As senhas não coincidem.
+            </div>
+          </div>
+      
+          <!-- Botão de Submissão -->
+          <!-- type="submit" [disabled]="form.invalid" class="btn btn-primary" -->
+          <button >
+            Cadastrar
+          </button>
+        </form>
+      </div>
+
+    <button (click)="goToLogin()">Login</button>
+</div>
